@@ -1,0 +1,38 @@
+:root {
+  /* Styles de couleur */
+ /* Color styles */
+ --color-tarif: linear-gradient(to bottom, hsl(253, 26%, 14%) 0%,rgba(216,195,254) 100%);
+ --color-footer: linear-gradient(to bottom, rgba(31,27,46) 0%,rgba(216,195,254) 100%);
+ --color-card: rgba(216,195,254);
+ --color-details: rgba(106,76,165);
+ --color-boutons: rgba(191,175,242);
+ --color-presentation: linear-gradient(to bottom, rgba(31,27,46) 0%,rgba(216,195,254) 58.5%,rgba(0,0,0) 100%);
+ --color-texte: rgba(255,255,255);
+ --color-section: linear-gradient(to bottom, rgba(106,76,165) 0%,rgba(122,93,207) 30%,rgba(141,113,255) 65%,rgba(140,153,250) 97%);
+ --color-fond: rgba(31,27,46);
+ --color-texte-2: rgba(0,0,0);
+ --color-texte-footer: rgba(182,180,188);
+
+  /* Tailles de police de caractère */
+  --nom: 120px;
+  --body: 24px;
+  --h3: 32px;
+  --h4: 28px;
+  --h2: 40px;
+  --smal: 16px;
+  --h4: 20px;
+  --boutons: 20px;
+  --card: 36px;
+
+  /* Espaces */
+  --space1x: 8px;
+  --space2x: 16px;
+  --space3x: 24px;
+  --space4x: 48px;
+  --space5x: 80px;
+  /* Effect styles */
+--effet-sur-le-footer:  0px 4px 4px rgba(0, 0, 0, 0.25);
+--effet-sur-les-tarifs-shadows:  0px 4px 4px rgba(216, 195, 254, 0.1);
+--effet-sur-les-tarifs-blur: blur(4px);
+}
+

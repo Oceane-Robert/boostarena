@@ -1,0 +1,14 @@
+/* Pour rendre les images responsives */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: -1;
+}
+
+/* Mise en forme des légendes pour les images */
