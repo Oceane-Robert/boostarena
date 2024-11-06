@@ -5,3 +5,32 @@
     text-align: center;
     padding: 0.4375rem 1.6875rem;
 }
+
+.filtre {
+    background: var(--color-orange);
+    border-radius: 1.25rem;
+    padding: 0.4375rem 1.6875rem;
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+.select {
+    background:transparent ;
+    border-radius: 1.25rem;
+    padding: 0.4375rem 1.6875rem;
+    color: var(--color-white);
+    border-color: var(--color-orange);
+}
+
+.button-select {
+    margin-top: 30px;
+}
+
+.button-creer {
+    background:transparent ;
+    border-radius: 1.25rem;
+    padding: 0.4375rem 1.6875rem;
+    color: var(--color-white);
+    text-decoration: none;
+    border: 1px solid var(--color-orange);
+}

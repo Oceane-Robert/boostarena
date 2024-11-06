@@ -1,0 +1,26 @@
+.hero {
+    position: relative;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.625rem;
+    font-family: Karantina;
+    font-weight: 400;
+    color: var(--color-white);
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-rectangle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px; /* Ajustez cette valeur pour décaler verticalement */
+    width: 120%; /* Ajustez la largeur du rectangle */
+    height: 20px; /* Ajustez la hauteur du rectangle */
+    background-color: var(--color-orange); /* Couleur du rectangle */
+    z-index: 0; /* Assurez-vous que le rectangle est derrière le texte */
+}
