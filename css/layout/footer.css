@@ -1,0 +1,36 @@
+.footer-logo {
+    transform: scale(0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.footer {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    margin: 0 -20px;
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-text, .footer-text>a {
+    color: #FFF;
+    font-family: Kanit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
