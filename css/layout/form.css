@@ -1,7 +1,8 @@
 /* Styles pour les champs à l'intérieur des inputs en tant que p */
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+textarea[type="message"] {
 margin-top: 7px;
 border-radius: 20px;
 background-color: var(--color-gris);
@@ -26,3 +27,15 @@ input[type="submit"] {
 .custom-login-form {
     margin-bottom: 5rem;
 }
+
+.textarea {
+margin-top: 7px;
+border-radius: 20px;
+height: 200px;
+background-color: var(--color-gris);
+padding: 10px;
+border: none;
+color: var(--color-white);
+width: 100%;
+}
+

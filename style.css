@@ -28,7 +28,7 @@ Soyez attentifs à l'ordre d'import :
 @import "css/layout/footer.css";
 @import "css/layout/accueil.css";
 @import "css/layout/hero.css";
-@import "css/layout/connexion.css";
+@import "css/layout/form.css";
 
 /* Components */
 @import "css/components/btn.css";
