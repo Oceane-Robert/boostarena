@@ -29,7 +29,6 @@
   
   .carousel__item {
     width: 400px; /* Largeur fixe des carrés */
-    height: 400px; /* Hauteur fixe des carrés */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -37,29 +36,6 @@
     border-radius: 8px;
   }
   
-  /* Dégradé du bas vers le haut */
-  .carousel__item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 60%; /* Hauteur du dégradé correspondant à 60% de l'élément */
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    z-index: 1; /* S'assurer que le dégradé est au-dessus de l'image */
-    pointer-events: none; /* Pour éviter toute interaction avec le pseudo-élément */
-  }
-  
-  /* Alterner la position des carrés */
-  .carousel__item:nth-child(odd) {
-    transform: translateY(
-      -65px
-    ); /* Décalage vers le haut pour les carrés impairs */
-  }
-  
-  .carousel__item:nth-child(even) {
-    transform: translateY(20px); /* Pas de décalage pour les carrés pairs */
-  }
   
   /* Image recadrée pour remplir complètement le carré */
   .carousel__image {
@@ -145,14 +121,13 @@
 
 .teams-container {
     display: flex;
+    padding: 17px 20px;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    gap: 28px;
+    flex-shrink: 0;
+    align-self: stretch;
 }
 
-.team-logo img  {
-  border-radius: 100rem;
-}
 
 .archive-match__carousel {
     width: 100%;

@@ -19,7 +19,7 @@
     border-radius: 1.25rem;
     padding: 0.4375rem 1.6875rem;
     color: var(--color-white);
-    border-color: var(--color-orange);
+    border: 2px solid var(--color-orange);
 }
 
 .button-select {

@@ -61,6 +61,7 @@ function custom_login_process() {
     if (isset($_POST['submit_login'])) {
         $creds = array();
         $creds['user_login'] = sanitize_user($_POST['user_login']);
+        $creds['user_email'] = sanitize_email($_POST['user_email']);
         $creds['user_password'] = esc_attr($_POST['user_password']);
         $creds['remember'] = true; // Option pour "se souvenir de moi"
 

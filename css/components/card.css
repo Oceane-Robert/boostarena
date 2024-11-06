@@ -36,9 +36,69 @@
     margin: 17px 12px;
 }
 
+
+.match-list {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    margin-top: 29px;
+}
+
+.match-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.vs {
+font-family: Karantina;
+font-size: 132px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin:0;
+}
+
+.team-logo img {
+
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+}
+.team-logo {
+    align-items: center;
+    justify-content: center;
+}
+
+.matchs-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--color-white);
+}
+
+
 /* Media query pour les appareils mobiles */
 @media (max-width: 768px) {
     .team-grid {
         grid-template-columns: repeat(1, minmax(100%, 1fr)); /* Une seule colonne sur les petits écrans */
     }
+    .match-list {
+        grid-template-columns: repeat(1, minmax(100%, 1fr)); /* Une seule colonne sur les petits écrans */
+    }
 }
+.card-date {
+    background-color: var(--color-orange);
+    padding: 5px 0; /* Ajuster le padding pour qu'il soit uniforme */
+    border-radius: 20px 20px 0px 0px;
+    width: 100%; /* Prendre toute la largeur du bloc parent */
+    text-align: center; /* Centrer le texte */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+}
+

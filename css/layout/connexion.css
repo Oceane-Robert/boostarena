@@ -1,0 +1,28 @@
+/* Styles pour les champs à l'intérieur des inputs en tant que p */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+margin-top: 7px;
+border-radius: 20px;
+background-color: var(--color-gris);
+padding: 10px;
+border: none;
+color: var(--color-white);
+width: 100%;
+}
+
+/* Exclure le bouton de soumission */
+input[type="submit"] {
+    border-radius: 1.25rem ;
+    border-color: transparent ;
+    background: var(--color-orange);
+    text-align: center;
+    padding: 0.4375rem 1.6875rem;
+    color: var(--color-white);
+    float: right;
+
+}
+
+.custom-login-form {
+    margin-bottom: 5rem;
+}
