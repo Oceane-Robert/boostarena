@@ -11,22 +11,27 @@ Soyez attentifs à l'ordre d'import :
   6. Les composant d'interface (Components)
 */
 
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karantina:wght@300;400;700&display=swap');
+
 /* Vendors */
 @import "css/vendors/normalize.css";
 /* Utils */
-@import "utils/variables.css";
+@import "css/utils/variables.css";
 
 /* Base */
-@import "base/main.css";
-@import "base/media.css";
+@import "css/base/main.css";
+@import "css/base/media.css";
 
 /* Layout */
-@import "layout/header.css";
-@import "layout/footer.css";
+@import "css/layout/header.css";
+@import "css/layout/footer.css";
+@import "css/layout/accueil.css";
 
 /* Components */
-@import "components/btn.css";
-@import "components/card.css";
+@import "css/components/btn.css";
+@import "css/components/card.css";
+@import "css/components/carousel.css";
 
 
 

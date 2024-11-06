@@ -1,0 +1,180 @@
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   
+   1. Carousel General Styles
+   
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+   .archive-match__carousel {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg); /* Espacement en bas du carrousel */
+  }
+  
+  /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     
+     2. Carousel Items
+     
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+  
+  .carousel {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s ease;
+    padding: 150px 50px;
+  }
+  
+  .carousel__item {
+    width: 400px; /* Largeur fixe des carrés */
+    height: 400px; /* Hauteur fixe des carrés */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  /* Dégradé du bas vers le haut */
+  .carousel__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%; /* Hauteur du dégradé correspondant à 60% de l'élément */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1; /* S'assurer que le dégradé est au-dessus de l'image */
+    pointer-events: none; /* Pour éviter toute interaction avec le pseudo-élément */
+  }
+  
+  /* Alterner la position des carrés */
+  .carousel__item:nth-child(odd) {
+    transform: translateY(
+      -65px
+    ); /* Décalage vers le haut pour les carrés impairs */
+  }
+  
+  .carousel__item:nth-child(even) {
+    transform: translateY(20px); /* Pas de décalage pour les carrés pairs */
+  }
+  
+  /* Image recadrée pour remplir complètement le carré */
+  .carousel__image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplir le carré sans distorsion */
+  }
+  
+  .carousel__title {
+      position: absolute;
+      bottom: 8px; /* Place au-dessus du bouton */
+      z-index: 2;
+      color: var(--color-white);
+      text-align: left;
+      left: 30px; /* Marge à gauche */
+      max-width: calc(80% - 60px); /* Fixe la largeur maximale à la largeur du conteneur moins les marges à gauche et à droite */
+      overflow: hidden; /* Masquer le texte qui dépasse */
+  }
+  
+  /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+     3. Carousel Navigation
+
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+  
+  /* Flèches de navigation */
+  .carousel__nav {
+    position: absolute;
+    transform: translateY(-50%);
+    background: rgba(66, 199, 230, 0.7); /* Opacité un peu plus élevée pour une meilleure visibilité */
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%; /* Rendre les flèches circulaires */
+    box-shadow: 0 4px 8px rgba(66, 199, 230, 0.3); /* Ajouter une ombre pour mieux les détacher de l'arrière-plan */
+    transition: background 0.3s ease, transform 0.2s ease; /* Animation au survol */
+  }
+  
+  .carousel__nav:hover {
+    background: rgba(66, 199, 230, 0.9); /* Accentuer la couleur au survol */
+    transform: translateY(-50%) scale(1.1); /* Augmenter légèrement la taille au survol */
+  }
+  
+  .carousel__nav:active {
+    transform: translateY(-50%) scale(0.95); /* Légère réduction de la taille lors du clic */
+  }
+  
+  .carousel__nav--prev {
+    left: 15px; /* Ajouter un espace par rapport au bord gauche */
+    bottom: 50px;
+  }
+  
+  .carousel__nav--next {
+    right: 15px; /* Ajouter un espace par rapport au bord droit */
+    top: 50px;
+  }
+
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__item {
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+
+.teams-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.team-logo img  {
+  border-radius: 100rem;
+}
+
+.archive-match__carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.carousel__nav {
+    cursor: pointer;
+    z-index: 10;
+}

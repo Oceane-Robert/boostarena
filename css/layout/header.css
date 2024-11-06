@@ -1,0 +1,43 @@
+/* Masquer le menu burger par défaut */
+.burger-menu {
+    display: none;
+    position : relative;
+    z-index: 100;
+}
+
+/* Afficher le menu burger uniquement quand `x-show="open"` */
+.burger-menu[x-show="open"] {
+    display: block;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-menu-items {
+    display: flex;
+    gap: 20px;
+}
+
+/* Bouton burger styling */
+.burger-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 110;
+}
+
+/* Masquer le bouton burger et le menu burger sur les écrans de taille desktop */
+@media (min-width: 1024px) {
+    .burger-btn,
+    .burger-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: flex;
+    }
+}

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-  <head>
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php the_title(); ?></title>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>" type="text/css">
     <?php wp_head(); ?>
-  </head>
-  <body>
-    <header>
-      <div class="site-title-description">
-        <h1><?php bloginfo('name'); ?></h1>
-        <h2><?php bloginfo('description'); ?></h2>
-      </div>
+</head>
+<body>
+<header class="header">
+    <div x-data="{ open: false }" class="menu-container relative">
+        <!-- Bouton Burger pour Mobile -->
+        <button @click="open = !open" class="burger-btn lg:hidden">
+            ☰
+        </button>
 
-      <div class="menu-header">
-        <!-- Menu principal -->
-        <nav class="menu-principal">
+        <!-- Menu pour Mobile et Desktop -->
+        <nav x-show="open || window.innerWidth >= 1024" @click.outside="open = false" 
+             class="menu-items absolute lg:relative top-12 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none"
+             :class="{'hidden lg:flex': !open && window.innerWidth < 1024}">
             <?php
-            wp_nav_menu(array(
-                'theme_location' => 'header-menu',
-                'container' => 'ul',
-                'menu_class' => 'nav-menu'
-            ));
+            wp_nav_menu([
+                'theme_location' => 'primary_menu',
+                'menu_class' => 'flex flex-col lg:flex-row items-start lg:items-center mobile-menu',
+            ]);
             ?>
         </nav>
-      </div>
-    </header>
-
-    <div class="wrap"
+    </div>
+</header>
+<?php wp_footer(); ?>
+</body>
+</html>
