@@ -7,27 +7,45 @@
     <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>" type="text/css">
     <?php wp_head(); ?>
 </head>
-<body>
-<header class="header">
-    <div x-data="{ open: false }" class="menu-container relative">
-        <!-- Bouton Burger pour Mobile -->
-        <button @click="open = !open" class="burger-btn lg:hidden">
-            ☰
+<body <?php body_class(); ?> id="top" x-data="{ menuIsOpen: false }" :class="{ 'no-scroll': menuIsOpen }">
+
+<header class="header" :class="{ 'menu--open': menuIsOpen }">
+    <div class="header__container">
+        <!-- Logo du site en SVG -->
+        <div class="header__first">
+            <div class="header__logo">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <?php if (has_site_icon()) : ?>
+                        <img src="<?php echo esc_url(get_site_icon_url()); ?>" alt="<?php bloginfo('name'); ?>" class="header__logo-image">
+                    <?php endif; ?>
+                </a>
+            </div>
+        </div>
+
+        <!-- Bouton du menu hamburger -->
+        <button class="header__menu-toggle" id="menuToggle" aria-label="Menu" aria-controls="mainNav"
+        @click="menuIsOpen = !menuIsOpen" :class="{ 'menu-btn--open': menuIsOpen }">
+        <span class="menu-btn__hamburger"></span>
         </button>
 
-        <!-- Menu pour Mobile et Desktop -->
-        <nav x-show="open || window.innerWidth >= 1024" @click.outside="open = false" 
-             class="menu-items absolute lg:relative top-12 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none"
-             :class="{'hidden lg:flex': !open && window.innerWidth < 1024}">
+        <!-- Menu principal -->
+        <nav class="header__nav" id="mainNav" :class="{ 'menu--open': menuIsOpen }">
             <?php
-            wp_nav_menu([
-                'theme_location' => 'primary_menu',
-                'menu_class' => 'flex flex-col lg:flex-row items-start lg:items-center mobile-menu',
-            ]);
+            wp_nav_menu(array(
+                'theme_location' => 'header-menu',
+                'container' => false,
+                'menu_class' => 'header__menu'
+            ));
             ?>
+        </nav>
+
+        <!-- Menu secondaire : Connexion/Déconnexion -->
+        <nav class="header__secondary-nav" id="mainNav" :class="{ 'menu--open': menuIsOpen }">
+            <?php display_login_logout_link(); ?>
         </nav>
     </div>
 </header>
+
 <?php wp_footer(); ?>
 </body>
 </html>

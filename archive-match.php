@@ -67,7 +67,7 @@ $filtered_matches = new WP_Query($args);
                             $nom_equipe2 = $equipe2[0]->post_title;
                             ?>
                             <div class="carousel__item w-full flex-shrink-0">
-                                <div class="matchs-card">
+                                <div class="match-card">
                                     <div class="card-date">
                                         <h3>Le <?php the_field('dateheure_du_match'); ?>H</h3>
                                     </div>

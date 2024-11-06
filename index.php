@@ -8,10 +8,12 @@
 </div>
 <div class="accueil">
     <div class="content">
-        <h1>BoostArena</h1>
-        <h3>DU 2 AU 30 NOVEMBRE</h3>
+        <h1 class="hero-title">BoostArena</h1>
+        <h3 class="hero-date">DU 2 AU 30 NOVEMBRE</h3>
         <p class="slogan">Rejoins vite le plus grand tournoi de Rocket League</p>
-        <button class="btn Button">S'inscrire</button>
+        <div class="hero-container">
+        <button class="hero-btn btn Button">S'inscrire</button>
+        </div>
     </div>
 </div>
     <p>Bienvenue  sur BoostArena ! 
@@ -89,5 +91,22 @@ Prêts à marquer l'histoire de Rocket League ? Rejoignez notre communauté de j
         </div>
     </section>
 </div>
+
+<sectio>
+    <div class="regle-card">
+        <img class="regle-img" src="<?php echo get_template_directory_uri(); ?>/img/rocket.png" alt="Rocket League">
+        <div class="regle-text">
+        <p class="regle-title">Comment ça marche ?</p>            
+        <p class="list">Pour participer au tournoi, il te suffit de :</p>
+        <ol class="list">
+            <li><strong>Crée ton profil:</strong> Inscris-toi gratuitement sur BoostArena et crée ton profil de joueur.</li>            
+            <li><strong>Compléter ton profil:</strong> Indique ton niveau, tes préférences de jeu et n'hésite pas à ajouter une petite présentation.</li>
+            <li><strong>Crée ton équipe:</strong> Rassemble tes deux meilleurs coéquipiers et crée une équipe à partir du 2 novembre jusqu’au 30 novembre. N'oublie pas de désigner un capitaine !</li>
+            <li><strong>Participe aux matchs:</strong> Une fois ton équipe créée, tu seras automatiquement inscrit à notre tournoi gratuitement. Nous nous occupons de te trouver des adversaires et de programmer les matchs.</li>
+            <li><strong>Respecte les règles:</strong> Sur BoostArena, le fair-play est primordial. Les insultes, la triche et tout autre comportement antisportif sont strictement interdits.</li>
+        </ol>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>

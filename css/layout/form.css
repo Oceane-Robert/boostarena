@@ -2,7 +2,8 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea[type="message"] {
+textarea[type="message"],
+select {
 margin-top: 7px;
 border-radius: 20px;
 background-color: var(--color-gris);
@@ -28,6 +29,11 @@ input[type="submit"] {
     margin-bottom: 5rem;
 }
 
+.custom-registration-form {
+    margin-bottom: 5rem;
+    color: var(--color-white)
+}
+
 .textarea {
 margin-top: 7px;
 border-radius: 20px;
@@ -39,3 +45,45 @@ color: var(--color-white);
 width: 100%;
 }
 
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.check {
+    color: var(--color-white);
+}
+
+figure {
+  margin: 0 auto;
+  display: flex;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.author-box {
+  display: flex;
+  justify-content: flex-start; /* Aligne les éléments au début du bloc */
+  align-items: center;
+  padding-left: 10px; /* Espace à l'intérieur de chaque élément de la liste */
+  margin-bottom: 10px; /* Espace entre les éléments de la liste */
+  margin-left: 0;
+  background-color: #4e5c65;
+  color: white; /* Fond gris pour chaque élément de la liste */
+  list-style: none;
+  border-radius: 10px;
+}
+
+.avatar img {
+  border-radius: 100%;
+  width: 50px; /* Largeur fixe pour l'avatar */
+  height: 50px; /* Hauteur fixe pour l'avatar */
+  object-fit: cover; /* L'image couvrira tout le bloc */
+  margin-right: 10px;
+  transform: scale(0.8); /* Ajoute un espace à droite de l'avatar */
+}
+
+.texte-equipe {
+  flex-grow: 1; /* Le texte prendra tout l'espace restant */
+}

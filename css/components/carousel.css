@@ -22,9 +22,8 @@
   
   .carousel {
     display: flex;
-    gap: 16px;
     transition: transform 0.5s ease;
-    padding: 150px 50px;
+    padding: 90px 0px 140px 0px;
   }
   
   .carousel__item {
@@ -50,12 +49,9 @@
   }
   
   .carousel__title {
-      position: absolute;
       bottom: 8px; /* Place au-dessus du bouton */
       z-index: 2;
       color: var(--color-white);
-      text-align: left;
-      left: 30px; /* Marge à gauche */
       max-width: calc(80% - 60px); /* Fixe la largeur maximale à la largeur du conteneur moins les marges à gauche et à droite */
       overflow: hidden; /* Masquer le texte qui dépasse */
   }
@@ -72,7 +68,7 @@
   .carousel__nav {
     position: absolute;
     transform: translateY(-50%);
-    background: rgba(66, 199, 230, 0.7); /* Opacité un peu plus élevée pour une meilleure visibilité */
+    background: var(--color-orange); /* Opacité un peu plus élevée pour une meilleure visibilité */
     color: #fff;
     border: none;
     padding: 12px 18px;
@@ -84,7 +80,7 @@
   }
   
   .carousel__nav:hover {
-    background: rgba(66, 199, 230, 0.9); /* Accentuer la couleur au survol */
+    background: var(--color-orange); /* Accentuer la couleur au survol */
     transform: translateY(-50%) scale(1.1); /* Augmenter légèrement la taille au survol */
   }
   
@@ -111,11 +107,6 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-
-.carousel__item {
-    min-width: 50%;
-    box-sizing: border-box;
 }
 
 

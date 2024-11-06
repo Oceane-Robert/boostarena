@@ -18,11 +18,13 @@ main {
 
 /* Les règles typographiques générales des titres */
 h2{
+  color: var(--color-white);
   font-family: Karantina;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin:0;
 }
 
 h4{

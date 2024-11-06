@@ -81,6 +81,17 @@ margin:0;
     justify-content: center;
     border-radius: 20px;
     background-color: var(--color-white);
+    width: max-content;
+}
+
+.match-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    width: 100%;
 }
 
 
@@ -101,4 +112,3 @@ margin:0;
     text-align: center; /* Centrer le texte */
     box-sizing: border-box; /* Inclure le padding dans la largeur totale */
 }
-
